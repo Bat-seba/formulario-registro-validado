@@ -1,0 +1,140 @@
+/*ESTILO DE ESTRUCTURA DE LA PÁGINA ----------------------------------------------------------------------------------------------------------------*/
+body { font-family: Arial, sans-serif; display: flex; justify-content: center; padding: 20px; background-color: #f4f4f4; }
+.form-container { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 100%; max-width: 400px; }
+
+
+
+/*ESTILO DEL FORMULARIO ----------------------------------------------------------------------------------------------------------------------------*/
+form { display: flex; flex-direction: column; }
+label { margin-top: 10px; font-weight: bold; }
+input { padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; font-size: 16px; }
+.error-msg { color: red; font-size: 12px; display: none; margin-top: 5px; }
+
+
+
+/* ESTADOS DE INTERACCIÓN DEL USUARIO: Resaltado visual en el campo de texto (Foco y errores) */
+input:focus { border: 2px solid blue; outline: none; } /* Resalta el borde en azúl al hacer clic */ 
+.campo-invalido { border: 2px solid red !important; }  /* Resalta el borde en rojo para campos inválidos */
+
+
+
+/* ESTILO PARA COMPONENTES ESPECIFICOS DEL FORMULARIO ----------------------------------------------------------------------------------------------*/
+#mensaje-servidor {  /* Estilo para el mensaje de respuesta del servidor */
+    white-space: pre-line; /* Obliga a respetar los \n en los párrafos del JavaScript. */
+    color: red;
+    margin-top: 10px;
+}
+
+.password-group {  /* Contenedor de la sección de contraseña */
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#togglePassword {  /* Estilo para el botón de ver/ocultar contraseña */
+    padding: 0 15px;
+    cursor: pointer;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 12px;
+    height: 38px; /* Altura ajustada para que el botón quede alineado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+#togglePassword:hover { /* Cambia el fondo al pasar el ratón por encima */
+    background-color: #ddd;
+}
+
+
+
+/*ESTILO PARA EL BOTÓN DE INSCRIPCIÓN -----------------------------------------------------------------------------------------------------------*/
+#btn-enviar { 
+    background-color: #28a745;   
+    color: white;                
+    margin-top: 25px;              
+    padding: 12px;                 
+    border: none;                  
+    border-radius: 5px;            
+    font-size: 16px;               
+    font-weight: bold;             
+    cursor: pointer;               /* Cambia el cursor a una mano al pasar por encima */
+    width: 100%;                    
+    transition: background-color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+#btn-enviar:hover {
+    background-color: #218838;   /* Efecto visual al pasar el ratón a un verde más oscuro*/
+}
+
+
+
+/* ESTILO DE LA NUEVA PANTALLA DE BIENVENIDA CON FONDO DE FOTO --------------------------------------------------------------------------------- */
+body.vista-bienvenida { /* Clase para la nueva vista de bienvenida */
+    /* Configuración de fondo para que la imagen de fondo cubra toda la pantalla */
+    background-size: cover;          /* Escala la imagen para cubrir todo sin deformar */
+    background-position: center;    
+    background-repeat: no-repeat;    /* No repite la imagen en mosaico */
+    background-attachment: fixed;    /* La imagen se queda fija al hacer scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.welcome-card {  /* Contenedor color blanco de la tarjeta */
+    max-width: 500px;    
+    width: 90%;            
+    background-color: rgba(255, 255, 255, 0.95);  
+    padding: 40px;          
+    border-radius: 20px;    
+    text-align: center;      
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    position: relative; 
+    z-index: 10; /* Asegura que esté por encima del fondo */
+}
+
+.welcome-card h1 {   /* Encabezado de la tarjeta */
+    color: #333;  
+    margin-bottom: 10px;   /* Espacio inferior */
+}
+
+.welcome-card p { /* Texto de la tarjeta */
+    color: #666;
+    line-height: 1.6;      
+}
+
+.courses-selection { /* Contenedor de la sección de cursos */
+    text-align: left;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+}
+
+.curso-option { /* Contenedor de las opciones de cursos */
+    margin-bottom: 15px;       
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-confirmar {  /* Botón de confirmar cursos */
+    margin-top: 30px;
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
